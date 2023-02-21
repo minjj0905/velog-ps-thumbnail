@@ -1,26 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import GlobalStyles from 'styles/GlobalStyles';
+import { QueryClient, QueryClientProvider } from 'react-query';
+import { ReactQueryDevtools } from 'react-query/devtools';
+import { Layout } from 'layouts';
+import { Main } from 'pages';
 
-function App() {
+const App = () => {
+  const client = new QueryClient();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Layout>
+      <GlobalStyles />
+      <QueryClientProvider client={client}>
+        <Main />
+        <ReactQueryDevtools />
+      </QueryClientProvider>
+    </Layout>
   );
-}
+};
 
 export default App;
