@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/velog-ps-thumbnail/static/js/main.6bcc1ed2.js",
+    "index.html": "/velog-ps-thumbnail/index.html",
+    "main.6bcc1ed2.js.map": "/velog-ps-thumbnail/static/js/main.6bcc1ed2.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.6bcc1ed2.js"
+  ]
+}
